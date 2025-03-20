@@ -104,6 +104,7 @@ trainer:
   enable_checkpointing: False  # Provided by exp_manager
   logger: false  # Provided by exp_manager
   benchmark: false # needs to be false for models with variable-length speech input as it slows down training
+  lang_id: 'ne' 
 
 
 exp_manager:
