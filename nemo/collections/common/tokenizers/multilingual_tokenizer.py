@@ -23,7 +23,10 @@ from nemo.utils import logging
 __all__ = ['MultilingualTokenizer']
 
 
+
 class MultilingualTokenizer(TokenizerSpec):
+    lang_id = 'ne'  
+    
     '''
     MultilingualTokenizer, allowing one to combine multiple regular monolongual tokenizers into one tokenizer.
     The intuition is that we can use existing tokenizers "as is", without retraining, and associate each tokenizer with a language id
