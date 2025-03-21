@@ -74,7 +74,7 @@ class TrainKenlmConfig:
     )  # List of digits to prune Ngram. Example: [0,0,1]. See Pruning section on the https://kheafield.com/code/kenlm/estimation
     cache_path: str = ""  # Cache path to save tokenized files.
     verbose: int = 1  # Verbose level, default is 1.
-    lang_id: str = "ne"  
+    # lang_id: str = "ne"  
 
 
 @hydra_runner(config_path=None, config_name='TrainKenlmConfig', schema=TrainKenlmConfig)
@@ -85,6 +85,8 @@ def main(args: TrainKenlmConfig):
         args.ngram_prune = [args.ngram_prune]
 
     tokenizer, encoding_level, is_aggregate_tokenizer = kenlm_utils.setup_tokenizer(args.nemo_model_file)
+    tokenizer = tokenizer.tokenizers_dict["ne"]
+    is_aggregate_tokenizer = "False"
 
     if encoding_level == "subword":
         discount_arg = "--discount_fallback"  # --discount_fallback is needed for training KenLM for BPE-based models
