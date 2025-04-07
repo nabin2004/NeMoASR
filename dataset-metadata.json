@@ -1,0 +1,11 @@
+{
+  "title": "NeMo ASR Model",
+  "id": "nabin2004/nemo-asr-model",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "description": "This dataset contains the NeMo ASR model and associated files.",
+  "keywords": ["speech recognition", "ASR", "NeMo"]
+}
