@@ -5,7 +5,7 @@ python3 examples/asr/speech_to_text_finetune.py \
 model.tokenizer.update_tokenizer=False \
 trainer.devices=-1 \
 trainer.accelerator="gpu" \
-trainer.max_epochs=100
+trainer.max_epochs=20
 # ++model.train_ds.use_semi_sorted_batching=true
 # ++model.train_ds.randomization_factor=0.1
 # trainer.sync_batchnorm= False \
